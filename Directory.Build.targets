@@ -1,0 +1,10 @@
+﻿<!-- Loaded after the .csprojs; links up the necessary dependencies -->
+<Project> 
+  <ItemGroup>
+    <!-- Include <GameModule> items -->
+    <Reference Include="@(GameModule)">
+      <HintPath>$(GameManaged)\%(Identity).dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

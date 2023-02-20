@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- Optionally set a version here -->
+    <!-- (or in the .user/.props if the same version should apply across all mods) -->
+    <Version>0.0.1</Version>
+  </PropertyGroup>
+
+  <!-- Include BepInEx -->
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.Core" Version="5.*" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="1.*" />
+  </ItemGroup>
+
+  <!-- Include necessary game assemblies -->
+  <!-- Unity assemblies can be imported the same way -->
+  <ItemGroup>
+    <GameModule Include="Assembly-CSharp" />
+    <GameModule Include="UnityEngine" />
+    <GameModule Include="UnityEngine.CoreModule" />
+  </ItemGroup>
+</Project>
